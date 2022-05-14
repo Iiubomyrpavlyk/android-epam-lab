@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <service android:name=".service.AccessCounterService"/>
+        <activity
+            android:name=".ui.ServiceActivity"
+            android:label="Service Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity4"
+            android:label="Activity 4"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity3"
+            android:label="Activity 3"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity2"
+            android:label="Activity 2"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity1"
+            android:label="Activity 1"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="Menu Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
